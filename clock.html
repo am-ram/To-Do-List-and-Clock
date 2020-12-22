@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>    
+    <meta charset="UTF-8">
+    <title>Analog Clock</title>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+    </style>
+</head>
+<body>
+<div class="parallax" >
+  <div class="wrapper">
+      <section class="left">
+    <div class="clock">
+        <div class="hour">
+            <div class="hr" id="hr"></div>
+        </div>
+
+        <div class="min">
+            <div class="mn" id="mn"></div>
+        </div>
+
+        <div class="sec">
+            <div class="sc" id="sc"></div>
+        </div>
+    </div><br>
+    <h2 class="glow" style="padding-left: 18vh;">Indian Standard Time,GMT+5:30</h2>
+   <br><br><br>
+    <div style="margin-left: 50% ;text-align: center; font-size: 26px; margin-bottom: 10px; color: rgb(221, 236, 13);">Scroll to Check Out My ML projects below</div>
+    <br><br><br>
+
+
+    <div class="container1">
+    
+        <div class="card">
+        <div class="box">
+            <div class="content">
+                <h2>01</h2>
+                <h3> Diabetes Predictor </h3>
+                <p>A end-to-end machine learning model that accepts your symptoms and can predict whether you're under the risk of diabetes.</p>
+                <a href="https://pimadiabetespredictor.herokuapp.com" target="_blank">Check Out</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="box">
+            <div class="content">
+                <h2>02</h2>
+                <h3> Spam SMS Classifier </h3>
+                <p>A Machine learning model that can classify your SMS's as Spam or not.</p>
+                <a href="https://detectspamsms.herokuapp.com" target="_blank">Check Out</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="box">
+            
+            <div class="content">
+                
+                <h2>03</h2>
+                <h3> Marriage Age Preidictor </h3>
+                <p>A fun Machine Learning model that can predict your age of marriage.</p>
+                <a href="https://fun-age-predictor.herokuapp.com" target="_blank">Check Out</a>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+<p style="text-align: right;font-size: xx-large; margin-right: -350px;">Author : Sai Ram.K<br>Last Updated : 22 December 2020</p>
+
+
+
+</section>
+    <section class="right">
+    <h1><span class="title">To-do</span>List</h1>
+    <div class="inputDiv">
+    	   <input type="text" class="input" placeholder="What Do You Want to Do...">
+    	   <button class="add"><i class="fas fa-plus"></i></button>
+    </div>
+    <div class="container">
+    </div>
+</section>
+    </div>
+</div>
+ 
+
+
+
+
+    
+
+<script src="todo.js"></script>
+<script type="text/javascript">
+const deg = 6;
+const hr = document.querySelector("#hr");
+const mn = document.querySelector("#mn");
+const sc = document.querySelector("#sc");
+setInterval(()=> {
+let day = new Date();
+let hh = day.getHours() * 30;
+let mm = day.getMinutes() * deg;
+let ss = day.getSeconds() * deg;
+
+hr.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`;
+mn.style.transform = `rotateZ(${mm}deg)`;
+sc.style.transform = `rotateZ(${ss}deg)`;
+})
+
+</script>
+
+</body>
+</html>
