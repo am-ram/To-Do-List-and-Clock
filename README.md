@@ -7,4 +7,4 @@ A HTML+CSS+JavaScript project that contains :- <br>
 
 ## Note:- This is my first static site and  comments are gladly welcomed. Further improvements are yet to be done.
 
-## You can check out the site [right here](https://todo-clock.herokuapp.com/)
+## You can check out the site [right here](https://clockandtodo.netlify.app//)
